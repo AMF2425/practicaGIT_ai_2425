@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkUrgente = new System.Windows.Forms.CheckBox();
             this.txtTelegrama = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.ordinario = new System.Windows.Forms.RadioButton();
+            this.urgente = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // chkUrgente
-            // 
-            this.chkUrgente.AutoSize = true;
-            this.chkUrgente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUrgente.Location = new System.Drawing.Point(69, 307);
-            this.chkUrgente.Name = "chkUrgente";
-            this.chkUrgente.Size = new System.Drawing.Size(95, 24);
-            this.chkUrgente.TabIndex = 0;
-            this.chkUrgente.Text = "Urgente?";
-            this.chkUrgente.UseVisualStyleBackColor = true;
-            this.chkUrgente.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtTelegrama
             // 
@@ -69,9 +58,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.Size = new System.Drawing.Size(177, 24);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Texto";
+            this.label1.Text = "Texto del telegrama";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -86,26 +75,52 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(562, 342);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(520, 324);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 43);
+            this.button1.Size = new System.Drawing.Size(170, 70);
             this.button1.TabIndex = 5;
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += btnCalcularPrecio_Click;
+            // 
+            // ordinario
+            // 
+            this.ordinario.AutoSize = true;
+            this.ordinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordinario.Location = new System.Drawing.Point(69, 304);
+            this.ordinario.Name = "ordinario";
+            this.ordinario.Size = new System.Drawing.Size(87, 22);
+            this.ordinario.TabIndex = 6;
+            this.ordinario.TabStop = true;
+            this.ordinario.Text = "Ordinario";
+            this.ordinario.UseVisualStyleBackColor = true;
+            this.ordinario.Checked = true;
+            // 
+            // urgente
+            // 
+            this.urgente.AutoSize = true;
+            this.urgente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urgente.Location = new System.Drawing.Point(185, 304);
+            this.urgente.Name = "urgente";
+            this.urgente.Size = new System.Drawing.Size(78, 22);
+            this.urgente.TabIndex = 7;
+            this.urgente.TabStop = true;
+            this.urgente.Text = "Urgente";
+            this.urgente.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.urgente);
+            this.Controls.Add(this.ordinario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtTelegrama);
-            this.Controls.Add(this.chkUrgente);
             this.Name = "Form1";
             this.Text = "+";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -115,13 +130,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox chkUrgente;
         private System.Windows.Forms.TextBox txtTelegrama;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton ordinario;
+        private System.Windows.Forms.RadioButton urgente;
     }
 }
 

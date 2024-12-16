@@ -26,7 +26,7 @@ namespace ejercicioTelegrama
             //Leo el telegrama 
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (urgente.Checked)
                 tipoTelegrama = 'u';
             tipoTelegrama = 'o';
             //Obtengo el número de palabras que forma el telegrama 
@@ -76,11 +76,6 @@ namespace ejercicioTelegrama
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
